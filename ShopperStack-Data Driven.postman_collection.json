@@ -237,7 +237,7 @@
     },
     {
       "key": "token",
-      "value": ""
+      "value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJuYWdlbmRyYS50ZXN0MDFAZ21haWwuY29tIFNIT1BQRVIiLCJleHAiOjE3OTA5NjczNTMsImlhdCI6MTc5MDkzMTM1M30.qjsIv46nWhx1Na-CcQSvq61hTcuK5EbFZ0yJLSzZ-iw"
     },
     {
       "key": "BaseUrl",
@@ -245,7 +245,7 @@
     },
     {
       "key": "shopperId",
-      "value": ""
+      "value": "507461"
     }
   ]
 }
