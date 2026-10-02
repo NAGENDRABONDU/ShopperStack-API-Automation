@@ -18,5 +18,5 @@ jobs:
           curl -o- "https://dl-cli.pstmn.io/install/linux64.sh" | sh
 
       - name: Run API Tests
-  	run: |
-    	  postman collection run "ShopperStack-Data Driven.postman_collection.json" --insecure
+        run: |
+          postman collection run "ShopperStack-Data Driven.postman_collection.json" --insecure
