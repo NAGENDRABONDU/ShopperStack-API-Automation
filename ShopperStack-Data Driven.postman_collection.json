@@ -102,13 +102,118 @@
           }
         ]
       }
+    },
+    {
+      "name": "Shopper Address",
+      "item": [
+        {
+          "name": "Get all the addresses",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  ""
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://www.shoppersstack.com/shopping/shoppers/{{shopperId}}/address",
+              "protocol": "https",
+              "host": [
+                "www",
+                "shoppersstack",
+                "com"
+              ],
+              "path": [
+                "shopping",
+                "shoppers",
+                "{{shopperId}}",
+                "address"
+              ]
+            }
+          },
+          "response": []
+        }
+      ],
+      "auth": {
+        "type": "bearer",
+        "bearer": [
+          {
+            "key": "token",
+            "value": "{{token}}",
+            "type": "string"
+          }
+        ]
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"Status code is 200\", function () {\r\n    pm.response.to.have.status(200);\r\n});\r\n\r\npm.test(\"Response time is less than 5000ms\", function () {\r\n    pm.expect(pm.response.responseTime).to.be.below(5000);\r\n});\r\npm.test(\"Your test name\", function () {\r\n    var jsonData = pm.response.json();\r\n    pm.expect(jsonData.message).to.eql(\"Success\");\r\n});"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Shopper Cart",
+      "item": [
+        {
+          "name": "Get all the products from the cart",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://www.shoppersstack.com/shopping/shoppers/{{shopperId}}/carts",
+              "protocol": "https",
+              "host": [
+                "www",
+                "shoppersstack",
+                "com"
+              ],
+              "path": [
+                "shopping",
+                "shoppers",
+                "{{shopperId}}",
+                "carts"
+              ]
+            }
+          },
+          "response": []
+        }
+      ],
+      "auth": {
+        "type": "bearer",
+        "bearer": [
+          {
+            "key": "token",
+            "value": "{{token}}",
+            "type": "string"
+          }
+        ]
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"Status code is 200\", function () {\r\n    pm.response.to.have.status(200);\r\n});\r\n\r\npm.test(\"Response time is less than 5000ms\", function () {\r\n    pm.expect(pm.response.responseTime).to.be.below(5000);\r\n});\r\npm.test(\"Your test name\", function () {\r\n    var jsonData = pm.response.json();\r\n    pm.expect(jsonData.message).to.eql(\"Success\");\r\n});"
+            ]
+          }
+        }
+      ]
     }
   ],
   "variable": [
-    {
-      "key": "userId",
-      "value": ""
-    },
     {
       "key": "email",
       "value": ""
@@ -127,6 +232,10 @@
     },
     {
       "key": "BaseUrl",
+      "value": ""
+    },
+    {
+      "key": "shopperId",
       "value": ""
     }
   ]
