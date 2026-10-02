@@ -1,0 +1,133 @@
+{
+  "info": {
+    "_postman_id": "0dddc396-c76f-4f6e-9067-bf38fcc7ab17",
+    "name": "ShopperStack-Data Driven",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "56699374",
+    "_collection_link": "https://go.postman.co/collection/56699374-0dddc396-c76f-4f6e-9067-bf38fcc7ab17?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Product View Action",
+      "item": [
+        {
+          "name": "Returns all the products",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"Status code is 200\", function () {\r\n    pm.response.to.have.status(200);\r\n});\r\n\r\npm.test(\"Response time is less than 2000ms\", function () {\r\n    pm.expect(pm.response.responseTime).to.be.below(2000);\r\n});\r\npm.test(\"Your test name\", function () {\r\n    var jsonData = pm.response.json();\r\n    pm.expect(jsonData.message).to.eql(\"Success\");\r\n});\r\n\r\n"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJuYWdlbmRyYS50ZXN0MDFAZ21haWwuY29tIFNIT1BQRVIiLCJleHAiOjE3OTA5NTM0MjMsImlhdCI6MTc5MDkxNzQyM30.3wtBrVtKzsFnnObVU4eIDqinSw2AGCFCjPgZqfYYqFQ",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://www.shoppersstack.com/shopping/products?zoneId=ALPHA",
+              "protocol": "https",
+              "host": [
+                "www",
+                "shoppersstack",
+                "com"
+              ],
+              "path": [
+                "shopping",
+                "products"
+              ],
+              "query": [
+                {
+                  "key": "zoneId",
+                  "value": "ALPHA"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Returns all the default products",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"Status code is 200\", function () {\r\n    pm.response.to.have.status(200);\r\n});\r\n\r\npm.test(\"Response time is less than 2000ms\", function () {\r\n    pm.expect(pm.response.responseTime).to.be.below(2000);\r\n});\r\npm.test(\"Your test name\", function () {\r\n    var jsonData = pm.response.json();\r\n    pm.expect(jsonData.message).to.eql(\"Success\");\r\n});"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://www.shoppersstack.com/shopping/products/alpha",
+              "protocol": "https",
+              "host": [
+                "www",
+                "shoppersstack",
+                "com"
+              ],
+              "path": [
+                "shopping",
+                "products",
+                "alpha"
+              ]
+            }
+          },
+          "response": []
+        }
+      ],
+      "auth": {
+        "type": "bearer",
+        "bearer": [
+          {
+            "key": "token",
+            "value": "{{token}}",
+            "type": "string"
+          }
+        ]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "userId",
+      "value": ""
+    },
+    {
+      "key": "email",
+      "value": ""
+    },
+    {
+      "key": "password",
+      "value": ""
+    },
+    {
+      "key": "role",
+      "value": ""
+    },
+    {
+      "key": "token",
+      "value": ""
+    },
+    {
+      "key": "BaseUrl",
+      "value": ""
+    }
+  ]
+}

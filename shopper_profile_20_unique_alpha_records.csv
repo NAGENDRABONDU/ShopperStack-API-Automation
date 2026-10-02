@@ -1,0 +1,21 @@
+city,country,email,firstName,gender,lastName,password,phone,state,zoneId
+Hyderabad,India,arjun.rao221@gmail.com,Arjun,Male,Rao,Arjun@2026,9876501201,Telangana,ALPHA
+Kochi,India,meera.nair222@gmail.com,Meera,Female,Nair,Meera@2026,9876501202,Kerala,ALPHA
+Jaipur,India,vikram.singh223@gmail.com,Vikram,Male,Singh,Vikram@2026,9876501203,Rajasthan,ALPHA
+Delhi,India,priya.sharma224@gmail.com,Priya,Female,Sharma,Priya@2026,9876501204,Delhi,ALPHA
+Vijayawada,India,kiran.reddy225@gmail.com,Kiran,Male,Reddy,Kiran@2026,9876501205,Andhra Pradesh,ALPHA
+Kolkata,India,ananya.das226@gmail.com,Ananya,Female,Das,Ananya@2026,9876501206,West Bengal,ALPHA
+Lucknow,India,rahul.verma227@gmail.com,Rahul,Male,Verma,Rahul@2026,9876501207,Uttar Pradesh,ALPHA
+Ahmedabad,India,sneha.patel282@gmail.com,Sneha,Female,Patel,Sneha@2026,9876501208,Gujarat,ALPHA
+Chennai,India,manoj.kumar229@gmail.com,Manoj,Male,Kumar,Manoj@2026,9876501209,Tamil Nadu,ALPHA
+Bengaluru,India,divya.menon320@gmail.com,Divya,Female,Menon,Divya@2026,9876501210,Karnataka,ALPHA
+Pune,India,rohit.gupta321@gmail.com,Rohit,Male,Gupta,Rohit@2026,9876501211,Maharashtra,ALPHA
+Mumbai,India,pooja.iyer322@gmail.com,Pooja,Female,Iyer,Pooja@2026,9876501212,Maharashtra,ALPHA
+Bhubaneswar,India,sanjay.bose233@gmail.com,Sanjay,Male,Bose,Sanjay@2026,9876501213,Odisha,ALPHA
+Indore,India,neha.joshi342@gmail.com,Neha,Female,Joshi,Neha@2026,9876501214,Madhya Pradesh,ALPHA
+Chandigarh,India,amit.kapoor325@gmail.com,Amit,Male,Kapoor,Amit@2026,9876501215,Chandigarh,ALPHA
+Visakhapatnam,India,lakshmi.rao362@gmail.com,Lakshmi,Female,Rao,Lakshmi@2026,9876501216,Andhra Pradesh,ALPHA
+Surat,India,varun.shah372@gmail.com,Varun,Male,Shah,Varun@2026,9876501217,Gujarat,ALPHA
+Guwahati,India,ishita.roy382@gmail.com,Ishita,Female,Roy,Ishita@2026,9876501218,Assam,ALPHA
+Mysuru,India,naveen.babu329@gmail.com,Naveen,Male,Babu,Naveen@2026,9876501219,Karnataka,ALPHA
+Patna,India,keerthi.paul402@gmail.com,Keerthi,Female,Paul,Keerthi@2026,9876501220,Bihar,ALPHA
