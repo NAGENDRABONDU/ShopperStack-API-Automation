@@ -108,6 +108,17 @@
       "item": [
         {
           "name": "Get all the addresses",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"Status code is 200\", function () {\r\n    pm.response.to.have.status(200);\r\n});\r\n\r\npm.test(\"Response time is less than 5000ms\", function () {\r\n    pm.expect(pm.response.responseTime).to.be.below(5000);\r\n});\r\npm.test(\"Your test name\", function () {\r\n    var jsonData = pm.response.json();\r\n    pm.expect(jsonData.message).to.eql(\"Success\");\r\n});"
+                ]
+              }
+            }
+          ],
           "request": {
             "auth": {
               "type": "bearer",
@@ -149,24 +160,24 @@
             "type": "string"
           }
         ]
-      },
-      "event": [
-        {
-          "listen": "test",
-          "script": {
-            "type": "text/javascript",
-            "exec": [
-              "pm.test(\"Status code is 200\", function () {\r\n    pm.response.to.have.status(200);\r\n});\r\n\r\npm.test(\"Response time is less than 5000ms\", function () {\r\n    pm.expect(pm.response.responseTime).to.be.below(5000);\r\n});\r\npm.test(\"Your test name\", function () {\r\n    var jsonData = pm.response.json();\r\n    pm.expect(jsonData.message).to.eql(\"Success\");\r\n});"
-            ]
-          }
-        }
-      ]
+      }
     },
     {
       "name": "Shopper Cart",
       "item": [
         {
           "name": "Get all the products from the cart",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"Status code is 200\", function () {\r\n    pm.response.to.have.status(200);\r\n});\r\n\r\npm.test(\"Response time is less than 5000ms\", function () {\r\n    pm.expect(pm.response.responseTime).to.be.below(5000);\r\n});\r\npm.test(\"Your test name\", function () {\r\n    var jsonData = pm.response.json();\r\n    pm.expect(jsonData.message).to.eql(\"Success\");\r\n});"
+                ]
+              }
+            }
+          ],
           "request": {
             "auth": {
               "type": "bearer",
@@ -208,18 +219,7 @@
             "type": "string"
           }
         ]
-      },
-      "event": [
-        {
-          "listen": "test",
-          "script": {
-            "type": "text/javascript",
-            "exec": [
-              "pm.test(\"Status code is 200\", function () {\r\n    pm.response.to.have.status(200);\r\n});\r\n\r\npm.test(\"Response time is less than 5000ms\", function () {\r\n    pm.expect(pm.response.responseTime).to.be.below(5000);\r\n});\r\npm.test(\"Your test name\", function () {\r\n    var jsonData = pm.response.json();\r\n    pm.expect(jsonData.message).to.eql(\"Success\");\r\n});"
-            ]
-          }
-        }
-      ]
+      }
     }
   ],
   "variable": [
