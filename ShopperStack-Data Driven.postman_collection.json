@@ -8,6 +8,88 @@
   },
   "item": [
     {
+      "name": "Shopper Profile",
+      "item": [
+        {
+          "name": "Shopper Login",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"Status code is 200\", function () {\r\n    pm.response.to.have.status(200);\r\n});\r\npm.test(\"Response time is less than 5000ms\", function () {\r\n    pm.expect(pm.response.responseTime).to.be.below(5000);\r\n});\r\npm.test(\"Your test name\", function () {\r\n    var jsonData = pm.response.json();\r\n    pm.expect(jsonData.message).to.eql(\"OK\");\r\n});\r\n\r\nconst res = pm.response.json();\r\npm.collectionVariables.set(\"token\",res.data.jwtToken);"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"email\": \"{{email}}\",\r\n  \"password\": \"{{password}}\",\r\n  \"role\": \"{{role}}\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{BaseUrl}}/users/login",
+              "host": [
+                "{{BaseUrl}}"
+              ],
+              "path": [
+                "users",
+                "login"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Find Shopper data by shopperId",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"Status code is 200\", function () {\r\n    pm.response.to.have.status(200);\r\n});\r\npm.test(\"Response time is less than 5000ms\", function () {\r\n    pm.expect(pm.response.responseTime).to.be.below(5000);\r\n});\r\npm.test(\"Your test name\", function () {\r\n    var jsonData = pm.response.json();\r\n    pm.expect(jsonData.message).to.eql(\"Success\");\r\n});"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "{{token}}",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{BaseUrl}}/shoppers/{{shopperId}}",
+              "host": [
+                "{{BaseUrl}}"
+              ],
+              "path": [
+                "shoppers",
+                "{{shopperId}}"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
       "name": "Product View Action",
       "item": [
         {
@@ -24,16 +106,6 @@
             }
           ],
           "request": {
-            "auth": {
-              "type": "bearer",
-              "bearer": [
-                {
-                  "key": "token",
-                  "value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJuYWdlbmRyYS50ZXN0MDFAZ21haWwuY29tIFNIT1BQRVIiLCJleHAiOjE3OTA5NTM0MjMsImlhdCI6MTc5MDkxNzQyM30.3wtBrVtKzsFnnObVU4eIDqinSw2AGCFCjPgZqfYYqFQ",
-                  "type": "string"
-                }
-              ]
-            },
             "method": "GET",
             "header": [],
             "url": {
@@ -225,23 +297,23 @@
   "variable": [
     {
       "key": "email",
-      "value": ""
+      "value": "nagendra.test01@gmail.com"
     },
     {
       "key": "password",
-      "value": ""
+      "value": "Nagendra@123"
     },
     {
       "key": "role",
-      "value": ""
+      "value": "SHOPPER"
     },
     {
       "key": "token",
-      "value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJuYWdlbmRyYS50ZXN0MDFAZ21haWwuY29tIFNIT1BQRVIiLCJleHAiOjE3OTA5NjczNTMsImlhdCI6MTc5MDkzMTM1M30.qjsIv46nWhx1Na-CcQSvq61hTcuK5EbFZ0yJLSzZ-iw"
+      "value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJuYWdlbmRyYS50ZXN0MDFAZ21haWwuY29tIFNIT1BQRVIiLCJleHAiOjE3OTEwNDE2MjIsImlhdCI6MTc5MTAwNTYyMn0.PszDrhHYL2Bgpmi744w-Nr3T82LBFuQmvCb7DnaycYM"
     },
     {
       "key": "BaseUrl",
-      "value": ""
+      "value": "https://www.shoppersstack.com/shopping"
     },
     {
       "key": "shopperId",
